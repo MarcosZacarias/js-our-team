@@ -1,5 +1,6 @@
 // |Creo una lista dei membri del Team
 const membersTeam = [
+  // |Inserisco nella lista _membri team_ i membri
   {
     name: "Wayne Barnett",
     role: "Founder & CEO",
@@ -37,8 +38,9 @@ const membersTeam = [
   },
 ];
 
-// |Inserisco nella lista _membri team_ i membri
-
-// Stampo nome, ruolo e foto di ogni membro
-
-// - per ogni membro in _membri team_ stampa il il valore dentro le parole chiavi
+// |Stampo nome, ruolo e foto di ogni membro
+for (const member of membersTeam) {
+  for (const key in member) {
+    console.log(key + ": " + member[key]);
+  }
+}
