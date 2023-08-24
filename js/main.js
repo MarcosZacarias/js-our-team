@@ -38,20 +38,17 @@ const membersTeam = [
   },
 ];
 
-// |Stampo nome, ruolo e foto di ogni membro
-for (const member of membersTeam) {
-  for (const key in member) {
-    console.log(key + ": " + member[key]);
-  }
-}
-
-// |Stampare le stesse informazioni su DOM
+// |Stampo nome, ruolo e foto di ogni membro su DOM e console
 
 // *Contenitore card in DOM
 const card = document.getElementById("card-container");
 
 // *Per ogni oggetto nell'array
 for (const member of membersTeam) {
+  for (const key in member) {
+    console.log(key + ": " + member[key]);
+  }
+
   card.innerHTML += `
   <div class="col-4">
   <div class="d-flex justify-content-center">
